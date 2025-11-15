@@ -12,9 +12,8 @@ width: 99%;
 height: 100%;
         }
         nav{
-            height: 95vh;
-            width: 100%;
           overflow: hidden;
+          background-color: #dadada;
         }
         .nav1{
             height: 50px;
@@ -59,15 +58,13 @@ height: 100%;
       }
       
         @media (max-width:600px) {
-            body{
-                background-color: antiquewhite;
-            }
+                    body{
+            
+width: 98%;
+height: 100%;
+                    }
             nav{
-                margin-left: -0.48rem;
-                height: 99.7vh;
-                width: 101.3%;
-              background-color: aliceblue;
-              position: fixed;
+              background-color: #dadada;
             }
     .nav1{
         position: fixed;
@@ -110,6 +107,12 @@ left: 0px;
 display: block;
     }
      #list2 {
+        margin-top: 3.3rem;
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        z-index: 999;
+        width: 250px;
         list-style-type: none;
         align-items: center;
         background-color: rgb(48, 46, 46);
@@ -173,12 +176,11 @@ opacity: 1;
                 <li>Certificate</li>
                 <li>Contact</li>
                 <li class="res">Resume</li>
-                <li class="sun">☀</li>
+                
                 <i id="menu">☰ </i>
             </ul>
         </div>
     
-   
     <div class="nav2">
         <ul id="list2">
              <i id="cross">✘</i>
@@ -194,6 +196,9 @@ opacity: 1;
         </ul>
     </div>
     </nav>
+    <main>
+        <img id="img" src="img1.jpg" width="100px" height="100px">
+    </main>
     <script>
         let one = document.getElementById("menu");
         let cros = document.getElementById("cross")
@@ -206,21 +211,6 @@ opacity: 1;
             twp.classList.remove("sideIn");
             twp.classList.add("sideOut");
         });
-        let sun = document.querySelectorAll("sun");
-        sun.addEventListener("click", () =>{
-           if (sun.innerHTML === "☀") {
-        // Dark → Light
-        sun.innerHTML = "☾";
-        document.body.style.backgroundColor = "white";
-        document.body.style.color = "black";
-    } else {
-        // Light → Dark
-        sun.innerHTML = "☀";
-        document.body.style.backgroundColor = "black";
-        document.body.style.color = "white";
-    }
-            });
-
       
     </script>
 </body>
