@@ -48,11 +48,11 @@ height: 100%;
             flex-wrap: 800;
             display: none;
         }
-       .list .sun{
-             margin-top: -0.5rem;
-            font-size: 1.6vw;
+        .sun{
+             margin-top: -0.8rem;
+            font-size: 2vw;
             flex-wrap: 800;
-            display: none;
+        cursor: pointer;
         }
       .nav2{
         display: none;
@@ -60,8 +60,10 @@ height: 100%;
       
         @media (max-width:600px) {
             nav{
-                height: 90vh;
-                width: 90%;
+                margin-left: -0.5rem;
+                height: 100vh;
+                width: 100%;
+                background-color: beige;
             }
     .nav1{
         position: fixed;
@@ -71,7 +73,8 @@ margin-left: -1.5rem;
     }     
     .nav1 h2{
         font-size: 5vw;
-        margin-left: 0.0rem;
+        margin-left: 6.5rem;
+        text-align: center;
     }  
   
     .list li{
@@ -80,21 +83,24 @@ margin-left: -1.5rem;
     #menu {
         display: block;
         font-size: 5vw;
-        margin-right: 1rem;
+        margin-right: 0.6rem;
         margin-top: -0.4rem;
         cursor: pointer;
+        align-items: left;
+        flex-direction: left;
+        justify-content: left;
     }
-   .list .sun{
-        display: block;
-        font-size: 5vw;
+   .sun{
+    
+        font-size: 6vw;
+        margin-top: -0.6rem;
         margin-right: 0rem;
-        cursor: pointer;
+       
     }
     .nav2{
-        position: fixed;
         align-items: center;
-        margin-top: -1rem;
-margin-left: 13rem;
+        margin-top: 3rem;
+margin-left: 10rem;
 position: relative;
 left: 0px;
 display: block;
@@ -103,10 +109,10 @@ display: block;
         list-style-type: none;
         align-items: center;
         background-color: rgb(48, 46, 46);
-       height: 91.2vh;
-      position: relative;
+       height: 125vh;
       top: 0px; 
-    transform: translateX(100%);
+      margin-left: 70px;
+
     }
     .nav2 #list2 li{
 margin-top: 10px;
@@ -146,7 +152,6 @@ opacity: 1;
             opacity: 0;
         }
     }
-
         } 
         
     </style>
@@ -197,6 +202,22 @@ opacity: 1;
             twp.classList.remove("sideIn");
             twp.classList.add("sideOut");
         });
+        let sun = document.querySelectorAll("sun");
+        sun.addEventListener("click", () =>{
+           if (sun.innerHTML === "☀") {
+        // Dark → Light
+        sun.innerHTML = "☾";
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+    } else {
+        // Light → Dark
+        sun.innerHTML = "☀";
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+    }
+            });
+
+      
     </script>
 </body>
 </html>
