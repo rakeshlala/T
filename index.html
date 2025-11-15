@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: rgb(37, 35, 35);
+color: white;
+width: 99%;
+height: 100%;
+        }
+        nav{
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+        .nav1{
+            height: 50px;
+            width: 100.8%;
+            margin-top: -0.5rem;
+            margin-left: -0.5rem;
+            display: flex;
+            justify-content: space-between;
+            border: 2px solid #dadada;
+        
+        }
+        .list{
+            list-style-type: none;
+            display: flex;
+           gap: 3vw;
+               padding: 0 3vw;
+              
+        }
+        .nav1 h2{
+            margin-top: 0.6rem;
+        margin-left: 5rem;
+            font-size: 1.8vw;
+            font-weight: 400;
+
+        }
+        .list li{
+            font-size: 1vw;
+        }
+        .menu{
+            margin-top: -0.5rem;
+            font-size: 1.6vw;
+            flex-wrap: 800;
+            display: none;
+        }
+       .list .sun{
+             margin-top: -0.5rem;
+            font-size: 1.6vw;
+            flex-wrap: 800;
+            display: none;
+        }
+      
+        @media (max-width:600px) {
+    .nav1{
+        background-color: black;
+        padding: 0 5vw;
+    }     
+    .nav1 h2{
+        font-size: 5vw;
+        margin-left: 0.0rem;
+    }       
+    .list li{
+        display: none;
+    }
+    #menu {
+        display: block;
+        font-size: 5vw;
+        margin-right: 1rem;
+        margin-top: -0.4rem;
+        cursor: pointer;
+    }
+   .list .sun{
+        display: block;
+        font-size: 5vw;
+        margin-right: 0rem;
+        cursor: pointer;
+    }
+    .nav2{
+        align-items: center;
+        margin-top: -1rem;
+margin-left: 13rem;
+position: relative;
+left: 0px;
+    }
+     #list2 {
+        list-style-type: none;
+        align-items: center;
+        background-color: rgb(170, 36, 36);
+       height: 91.2vh;
+      position: relative;
+      top: 0px;
+    transform: translateX(100%);
+    }
+    .nav2 #list2 li{
+margin-top: 10px;
+        padding: 10px;
+        font-size: 4vw;
+        position: relative;
+        gap: 5px;
+    }
+ #cross{
+        font-size: 6vw;
+      margin-left: 5rem;
+      cursor: pointer;
+    }
+     .sideIn {
+        animation: navIn 0.5s forwards;
+    }
+    .sideOut {
+        animation: navOut 0.5s forwards;
+    }
+@keyframes navIn {
+        0% {
+transform: translateX(100%);
+opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    @keyframes navOut {
+        0% {
+transform: translateX(0);
+opacity: 1;
+        }
+        100% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    }
+
+        }    
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav1">
+            <h2>Jeevan Satish Kaware</h2>
+            <ul class="list">
+                <li>About</li>
+                <li>Experience</li>
+                <li>Project</li>
+                <li>Skills</li>
+                <li>Education</li>
+                <li>Certificate</li>
+                <li>Contact</li>
+                <li class="res">Resume</li>
+                <li class="sun">☀</li>
+                <i id="menu">☰</i>
+            </ul>
+        </div>
+    </nav>
+   
+    <div class="nav2">
+        <ul id="list2">
+             <i id="cross">✘</i>
+             <li>About</li>
+                <li>Experience</li>
+                <li>Project</li>
+                <li>Skills</li>
+                <li>Education</li>
+                <li>Certificate</li>
+                <li>Contact</li>
+                <li class="res">Resume</li>
+               
+        </ul>
+    </div>
+    <script>
+        let one = document.getElementById("menu");
+        let cros = document.getElementById("cross")
+        let twp = document.getElementById("list2");
+        one.addEventListener("click", () =>{
+            twp.classList.remove("sideOut");
+   twp.classList.add("sideIn");
+        });
+        cros.addEventListener("click", () =>{
+            twp.classList.remove("sideIn");
+            twp.classList.add("sideOut");
+        });
+    </script>
+</body>
+</html>
